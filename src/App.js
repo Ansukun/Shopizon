@@ -1,8 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css"
+import Electronics from "./Electronics"
+import Groceries from "./Groceries"
+import Mobile from "./Mobile"
 import Header from "./Header"
 import Home from "./Home"
 import Login from "./Login"
+import Sports from "./Sports"
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Checkout from "./Checkout"
@@ -44,6 +48,22 @@ function App() {
           <Route path="/orders">
             <Header />
             {/* <Orders /> */}
+          </Route>
+          <Route path="/Sports">
+          <Header />
+            <Sports />
+          </Route>
+          <Route path="/Electronics">
+          <Header />
+            <Electronics/>
+          </Route>
+          <Route path="/Groceries">
+            <Header/>
+            <Groceries />
+          </Route>
+          <Route path="/Mobile">
+          <Header />
+            <Mobile/>
           </Route>
           <Route path="/login">
             <Login />
